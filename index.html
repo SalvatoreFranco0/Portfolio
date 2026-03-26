@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvatore Franco — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Prevent flash: apply saved theme & language before paint -->
+    <script>
+        (function(){
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+            var l = localStorage.getItem('lang');
+            if (l && l !== 'en') {
+                document.documentElement.lang = l;
+                document.documentElement.classList.add('i18n-loading');
+            }
+        })();
+    </script>
+
+    <!-- Skip to content (accessibility) -->
+    <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
+
+    <!-- ── NAVIGATION ── -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav__logo" aria-label="Home">SF</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="navLinks" role="list">
+            <li><a href="#about"    class="nav__link" data-i18n="nav.about">About</a></li>
+            <li><a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#skills"   class="nav__link" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#contact"  class="nav__link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="nav__actions">
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-toggle__label">IT</span>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                <span class="theme-toggle__icon--moon" aria-hidden="true">&#9790;</span>
+                <span class="theme-toggle__icon--sun" aria-hidden="true">&#9728;</span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="home" aria-label="Introduction">
+        <!-- Background layers -->
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+        <div class="hero__inner">
+            <div class="hero__content">
+                <!-- Status badge -->
+                <div class="hero__status reveal" aria-label="Availability status">
+                    <span class="hero__status-dot" aria-hidden="true"></span>
+                    <span data-i18n="hero.status">Available for new projects</span>
+                </div>
+
+                <!-- Name -->
+                <h1 class="hero__name reveal reveal--delay-1">
+                    <span class="hero__name-line">Salvatore</span>
+                    <span class="hero__name-line hero__name-line--accent">Franco</span>
+                </h1>
+
+                <!-- Role -->
+                <p class="hero__roles reveal reveal--delay-2">
+                    <span class="hero__role">Project Manager</span>
+                    <span class="hero__role-sep" aria-hidden="true">·</span>
+                    <span class="hero__role">AI-Aided</span>
+                    <span class="hero__role-sep" aria-hidden="true">·</span>
+                    <span class="hero__role">Web Developer</span>
+                    <span class="hero__role-sep" aria-hidden="true">·</span>
+                    <span class="hero__role">Data Analyst</span>
+                </p>
+
+                <!-- Tagline -->
+                <p class="hero__tagline reveal reveal--delay-3" data-i18n="hero.tagline">
+                    Digital Transformation Project Manager, Master's degree in Mechanical Engineering, 4+ years across transformation, 
+                    SAP, and Power Platform — now exploring the new frontiers of AI.
+                    I distil technical complexity into sharp strategic decisions — because every digital transformation is, at its core, a human one.
+                </p>
+
+                <!-- CTAs -->
+                <div class="hero__cta reveal reveal--delay-4">
+                    <a href="#projects" class="btn btn--primary" data-i18n="hero.cta.work">View My Work</a>
+                    <a href="#contact"  class="btn btn--ghost" data-i18n="hero.cta.contact">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="hero__photo reveal reveal--delay-2">
+                <img src="01.images/fotoProfilo.jpg" alt="Salvatore Franco">
+            </div>
+        </div>
+
+        <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+            <span class="hero__scroll-line" aria-hidden="true"></span>
+            <span data-i18n="hero.scroll">scroll</span>
+        </a>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+            <span class="section__label mono fade-in" data-i18n="about.label">01 — About</span>
+            <div class="about-grid">
+                <div class="about__text fade-in">
+                    <h2 class="section__title" id="about-title" data-i18n="about.title">
+                        What I do <span class="text-gradient">best</span>.
+                    </h2>
+                    <p data-i18n="about.p1">Complexity kills efficiency. I build the systems that prevent it. Custom apps, data platforms, AI-assisted workflows, and PMO governance that keep projects on time and teams in control.</p>
+                    <p data-i18n="about.p2">I track what's new, what's proven, and what's hype. I help companies cut through the noise — matching the right tools to real business needs, so decisions get made faster and budgets don't get wasted on the wrong bet.</p>
+                    <a href="about.html" class="btn btn--ghost btn--sm" data-i18n="about.profile">Full Profile →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section class="section section--surface" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+            <span class="section__label mono fade-in" data-i18n="projects.label">02 — Projects</span>
+            <h2 class="section__title fade-in" id="projects-title" data-i18n="projects.title">Selected Work</h2>
+
+            <div class="projects-grid" role="list">
+
+                <article class="project-card project-card--featured fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--web">Web App</span>
+                            <span class="tag tag--featured">Featured</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">01</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.1.title">Diamond Counter Robot App</h3>
+                    <p class="project-card__desc" data-i18n="proj.1.desc">Low-code web app enabling jewellers to track precious stone inventory in real time and automatically match diamonds to production orders — eliminating manual lookups on the production floor.</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+                <article class="project-card fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--web">Web App</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">02</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.2.title">Tips</h3>
+                    <p class="project-card__desc" data-i18n="proj.2.desc">Web application for requesting and managing tips and feedback about products, processes and environment from the employees.</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+                <article class="project-card fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--web">Web App</span>
+                            <span class="tag tag--industry">Manufacturing</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">03</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.3.title">Asset Manager</h3>
+                    <p class="project-card__desc" data-i18n="proj.3.desc">Full-featured asset tracking and lifecycle management platform built for operational teams.</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+                <article class="project-card project-card--featured fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--project">Project</span>
+                            <span class="tag tag--industry">Manufacturing</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">04</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.4.title">Data Platform</h3>
+                    <p class="project-card__desc" data-i18n="proj.4.desc">I worked as business data analyst on the development of a comprehensive data platform for a manufacturing company, enabling real-time KPI tracking and operational BI.</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+                <article class="project-card fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--report">Report</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">05</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.5.title">Daily KPIs Dashboard</h3>
+                    <p class="project-card__desc" data-i18n="proj.5.desc">Automated daily KPI reporting with drill-through capabilities and executive summaries in Power BI.</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+                <article class="project-card fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--project">Project</span>
+                            <span class="tag tag--industry">Energy</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">06</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.6.title">Data Platform — Energy Sector</h3>
+                    <p class="project-card__desc" data-i18n="proj.6.desc">Led the delivery of a corporate Data Platform initiative within a major multi-utility group, coordinating a cross-functional team of developers and ensuring transparent workload tracking across AFC, Procurement, Digital Innovation and People structures.</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+                <article class="project-card fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--project">Project</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">07</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.7.title">SAP R/3 → S/4 HANA Migration</h3>
+                    <p class="project-card__desc" data-i18n="proj.7.desc">I worked as SAP Consultant on the migration from SAP R/3 to S/4 HANA, managing stakeholders, data migration, customizing of AS IS processeses and go-live activities. I worked with SAP SD and MM modules for logistic and after sales services departments</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+                <article class="project-card fade-in" role="listitem">
+                    <div class="project-card__header">
+                        <div class="project-card__tags">
+                            <span class="tag tag--project">Project</span>
+                        </div>
+                        <span class="project-card__num mono" aria-hidden="true">08</span>
+                    </div>
+                    <h3 class="project-card__title" data-i18n="proj.8.title">Industry 4.0 Certification Manager</h3>
+                    <p class="project-card__desc" data-i18n="proj.8.desc">Tool to manage and track Industry 4.0 certifications, requirements, and renewal deadlines across departments.</p>
+                    <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+            <span class="section__label mono fade-in" data-i18n="skills.label">03 — Skills</span>
+            <h2 class="section__title fade-in" id="skills-title" data-i18n="skills.title">What I work with</h2>
+
+            <div class="skills-groups fade-in">
+                <div class="skills-group">
+                    <div class="skills-group__header">
+                        <span class="skills-group__dot" style="background:#818cf8" aria-hidden="true"></span>
+                        <h4 class="skills-group__label mono">Project Management</h4>
+                    </div>
+                    <div class="skills-pills" role="list">
+                        <span class="pill" role="listitem">Project Management</span>
+                        <span class="pill" role="listitem">Stakeholder Management</span>
+                        <span class="pill" role="listitem">Agile / Scrum</span>
+                        <span class="pill" role="listitem">Process Improvement</span>
+                        <span class="pill" role="listitem">Microsoft Project</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group__header">
+                        <span class="skills-group__dot" style="background:#34d399" aria-hidden="true"></span>
+                        <h4 class="skills-group__label mono">Data &amp; Analytics</h4>
+                    </div>
+                    <div class="skills-pills" role="list">
+                        <span class="pill" role="listitem">Data Analysis</span>
+                        <span class="pill" role="listitem">Microsoft Power BI</span>
+                        <span class="pill" role="listitem">Excel Power Query</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group__header">
+                        <span class="skills-group__dot" style="background:#60a5fa" aria-hidden="true"></span>
+                        <h4 class="skills-group__label mono">Microsoft Platform</h4>
+                    </div>
+                    <div class="skills-pills" role="list">
+                        <span class="pill" role="listitem">Power Apps</span>
+                        <span class="pill" role="listitem">Power Automate</span>
+                        <span class="pill" role="listitem">Power Platform</span>
+                        <span class="pill" role="listitem">Microsoft 365</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group__header">
+                        <span class="skills-group__dot" style="background:#f472b6" aria-hidden="true"></span>
+                        <h4 class="skills-group__label mono">Development</h4>
+                    </div>
+                    <div class="skills-pills" role="list">
+                        <span class="pill pill--accent" role="listitem">HTML / CSS</span>
+                        <span class="pill pill--accent" role="listitem">JavaScript</span>
+                        <span class="pill pill--accent" role="listitem">Web Development</span>
+                        <span class="pill" role="listitem">UI / UX Design</span>
+                        <span class="pill" role="listitem">Bubble.io</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="contact-inner fade-in">
+                <span class="section__label mono" data-i18n="contact.label">04 — Contact</span>
+                <h2 class="section__title contact__title" id="contact-title" data-i18n="contact.title">
+                    Let's work<br><span class="text-gradient">together.</span>
+                </h2>
+                <p class="contact__subtitle" data-i18n="contact.sub">Have a project in mind or just want to connect? I'd love to hear from you.</p>
+                <a href="mailto:salvatorefranco@outlook.it" class="btn btn--primary btn--lg">
+                    salvatorefranco@outlook.it
+                </a>
+                <div class="contact__socials">
+                    <a href="https://www.linkedin.com/in/salvatorefranco" target="_blank" rel="noopener noreferrer" class="contact__social">
+                        LinkedIn ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main><!-- /main -->
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__inner">
+            <span class="footer__copy">© 2025 Salvatore Franco</span>
+            <span class="footer__credit mono" data-i18n="footer.credit">Built with HTML · CSS · JS</span>
+        </div>
+    </footer>
+
+    <!-- Language support -->
+    <script src="i18n.js"></script>
+
+    <script>
+        // ── Navbar: scrolled state ──
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // ── Mobile nav toggle ──
+        const navToggle = document.getElementById('navToggle');
+        const navLinks  = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('nav__links--open');
+            navToggle.classList.toggle('nav__toggle--open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav__links--open');
+                navToggle.classList.remove('nav__toggle--open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ── Active nav link on scroll ──
+        const sections   = document.querySelectorAll('section[id]');
+        const navAnchors = document.querySelectorAll('.nav__link');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navAnchors.forEach(a => {
+                        a.classList.remove('nav__link--active');
+                        a.removeAttribute('aria-current');
+                    });
+                    const active = document.querySelector(`.nav__link[href="#${entry.target.id}"]`);
+                    if (active) {
+                        active.classList.add('nav__link--active');
+                        active.setAttribute('aria-current', 'true');
+                    }
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(s => sectionObserver.observe(s));
+
+        // ── Scroll reveal ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-in, .reveal').forEach(el => revealObserver.observe(el));
+
+        // ── Hero: trigger reveals immediately on load ──
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.reveal').forEach((el, i) => {
+                setTimeout(() => el.classList.add('is-visible'), i * 50 + 80);
+            });
+        });
+
+        // ── Theme toggle ──
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            if (next === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', next);
+            }
+            localStorage.setItem('theme', next === 'dark' ? '' : next);
+        });
+    </script>
+
+</body>
+</html>
